@@ -1,0 +1,31 @@
+# Python依赖包
+# 基础依赖
+gradio>=4.4.0
+numpy>=1.25.0
+pandas>=2.0.3
+matplotlib>=3.7.2
+Pillow>=9.5.0
+
+# 功能依赖
+python-dotenv>=1.0.0
+qrcode>=7.3.1
+requests>=2.31.0
+
+# 数据处理
+chardet>=5.1.0
+idna>=3.4
+
+# 工具库
+typing_extensions>=4.7.0
+
+# 开发依赖
+pytest>=7.4.0
+black>=23.7.0
+flake8>=6.1.0
+isort>=5.12.0
+mypy>=1.4.0
+
+# 注意：
+# 1. 安装所有依赖：pip install -r requirements.txt
+# 2. 开发环境安装：pip install -r requirements.txt
+# 3. 生产环境安装（不含开发依赖）：pip install -r <(grep -v '# 开发依赖' requirements.txt | grep -v '#' | grep .)

@@ -1,0 +1,252 @@
+/* 全局样式重置和天空蓝主题 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 主体背景 - 天蓝流光效果 */
+body, .gradio-container {
+    background: linear-gradient(135deg, 
+        #87CEEB 0%, 
+        #4169E1 25%, 
+        #1E90FF 50%, 
+        #00BFFF 75%, 
+        #87CEFA 100%) !important;
+    background-size: 400% 400% !important;
+    animation: skyGradient 8s ease infinite !important;
+    color: white !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* 天蓝流光动画 */
+@keyframes skyGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 主标题样式 */
+.main-title {
+    font-size: 2.5em !important;
+    text-align: center !important;
+    color: white !important;
+    margin: 20px 0 !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+    animation: glow 2s ease-in-out infinite alternate !important;
+}
+
+/* 标题发光效果 */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.5);
+    }
+}
+
+/* 按钮样式 */
+.btn, button {
+    background: linear-gradient(145deg, #4169E1, #1E90FF) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 12px 24px !important;
+    color: white !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 8px rgba(65, 105, 225, 0.3) !important;
+}
+
+.btn:hover, button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px rgba(65, 105, 225, 0.4) !important;
+}
+
+/* 输入框和文本区域样式 */
+.input-box, textarea, input[type="text"], input[type="number"], input[type="email"] {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid #1E90FF !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    color: #333 !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.input-box:focus, textarea:focus, input:focus {
+    border-color: #00BFFF !important;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.3) !important;
+    outline: none !important;
+}
+
+/* 卡片样式 */
+.card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 标签页样式 */
+.tab {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px 10px 0 0 !important;
+    padding: 10px 20px !important;
+    margin: 0 5px !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.tab.active {
+    background: rgba(255, 255, 255, 0.3) !important;
+    font-weight: bold !important;
+}
+
+/* 输出区域样式 */
+.output-area {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+    color: #333 !important;
+    min-height: 200px !important;
+    overflow-y: auto !important;
+}
+
+/* 分隔线样式 */
+.divider {
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent) !important;
+    margin: 20px 0 !important;
+    border: none !important;
+}
+
+/* 进度条样式 */
+.progress-bar {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+
+.progress-bar-fill {
+    background: linear-gradient(90deg, #1E90FF, #00BFFF) !important;
+    height: 100% !important;
+    transition: width 0.3s ease !important;
+}
+
+/* 图片样式 */
+.image-preview {
+    border-radius: 10px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.image-preview:hover {
+    transform: scale(1.02) !important;
+}
+
+/* 提示信息样式 */
+.tooltip {
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+    border-radius: 5px !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2em !important;
+    }
+    
+    .card {
+        padding: 15px !important;
+        margin: 10px 0 !important;
+    }
+    
+    .btn, button {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* 加载动画 */
+.loading {
+    border: 3px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 50% !important;
+    border-top: 3px solid white !important;
+    width: 20px !important;
+    height: 20px !important;
+    animation: spin 1s linear infinite !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* 简化版样式 */
+.simple-theme {
+    body, .gradio-container {
+        background: linear-gradient(135deg, #87CEEB 0%, #4169E1 50%, #1E90FF 100%) !important;
+        color: white !important;
+        font-family: 'Segoe UI', sans-serif !important;
+    }
+    
+    .main-title {
+        font-size: 2.5em !important;
+        text-align: center !important;
+        color: white !important;
+        margin: 20px 0 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+    }
+    
+    .btn, button {
+        background: linear-gradient(145deg, #4169E1, #1E90FF) !important;
+        border: none !important;
+        border-radius: 10px !important;
+        padding: 12px 24px !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+    
+    .btn:hover, button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 16px rgba(65, 105, 225, 0.4) !important;
+    }
+}
