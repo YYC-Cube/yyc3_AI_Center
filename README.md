@@ -280,7 +280,7 @@ npx prettier --check .
 如有任何问题或建议，请联系我们：
 
 - 电子邮件：admin@0379.email
-- 官方网站：[www.yy.0379.pro](http://www.yy.0379.pro)
+- 官方网站：https://github.com/YYC-Cube/yyc3_AI_Center.git
 
 ## 📌 特别说明
 
